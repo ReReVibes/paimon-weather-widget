@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Paimon Weather Widget</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="widget">
+
+        <button id="close-button">✦</button>
+
+        <div class="paimon-area">
+            <img class="paimon" src="images/paimon.gif" alt="Paimon">
+        </div>
+
+        <div class="weather-info">
+            <div id="location">Finding location...</div>
+            <div class="temperature-container">
+                <span id="temperature">31°C</span>
+                <img id="weather-icon" src="" alt="Weather">
+                
+            </div>
+            <div id="paimon-message">Paimon is checking the weather...</div>
+
+             <div class="resource">
+                <div class="date" id="date">Loading…</div>
+                <div class="time" id="time">
+                    <span id="time-main">00:00</span><span class="seconds" id="time-seconds">:00</span>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <script>
+        document.getElementById("close-button").addEventListener("click", () => {
+            window.electronAPI.closeWidget();
+        });
+    </script>
+
+    <script src="weather.js"></script>
+
+</body>
+
+</html>
