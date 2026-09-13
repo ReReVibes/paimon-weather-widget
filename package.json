@@ -1,6 +1,6 @@
 {
     "name": "paimon-weather-widget",
-    "version": "1.2.0",
+    "version": "1.1.0",
     "description": "",
     "main": "main.js",
     "scripts": {
@@ -9,11 +9,11 @@
     },
     "keywords": [],
     "author": "",
-    "license": "ISC",
+    "license": "UNLICENSED",
     "type": "commonjs",
     "devDependencies": {
         "electron": "^43.4.0",
-        "electron-builder": "^..."
+        "electron-builder": "^26.15.3"
     },
    "build": {
     "appId": "com.rerevibes.paimonweather",
