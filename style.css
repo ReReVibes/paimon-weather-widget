@@ -54,11 +54,13 @@ body {
     align-items: center;
     position: relative;
     z-index: 1;
+    
 }
 
 .paimon {
     width: 160px;
     height: auto;
+    border-radius:12px;
 }
 
 .weather-info {

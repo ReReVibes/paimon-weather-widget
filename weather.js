@@ -157,6 +157,25 @@ function getWeatherIcon(category, isDay) {
         : "images/cloudy-night.svg";
 }
 
+
+//paimon gif 
+function getPaimonImage(category) {
+
+    if (category === "clear" || category === "cloudy") {
+        return "images/calm-paimon.gif";
+    }
+
+    if (category === "drizzle" || category === "rain") {
+        return "images/paimon-rain.gif";
+    }
+
+    if (category === "thunderstorm") {
+        return "images/lightning-paimon.gif";
+    }
+
+    return "images/paimon.gif";
+}
+
 // Get approximate location
 
 async function getCurrentLocation() {
@@ -250,6 +269,7 @@ async function updateWeather() {
 
         // Update the widget
         const icon = getWeatherIcon(category, isDay);
+        const paimonImage = getPaimonImage(category);
         console.log("Weather icon:", icon);
 
 
@@ -258,6 +278,9 @@ async function updateWeather() {
 
         document.getElementById("weather-icon").src =
             icon;
+
+        document.querySelector(".paimon").src =
+            paimonImage;
 
         document.getElementById("paimon-message").textContent =
             message;
